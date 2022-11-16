@@ -1,0 +1,245 @@
+/* Add code for container class below */
+.container {
+  /* Add rules here */
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 2fr 8fr 2fr;
+  column-gap: 10px;
+}
+
+
+
+
+.col-12 {
+  grid-column: span 12 / span 12;
+  grid-column: 1/13;
+}
+
+.col-8 {
+  grid-column: span 8 / span 8;
+}
+
+.col-2 {
+  grid-column: span 2/ span 2;
+}
+
+
+.left,
+.right {
+  position: relative;
+  min-width: 100px;
+  top: 20px;
+}
+
+.middle {
+  position: relative;
+  border: 1px solid black;
+  background-color: lightslategrey;
+  top: 20px;
+}
+
+/* Add media rules for container class below */
+@media (min-width: 440px) {
+
+}
+
+
+/* Properties for other selectors */
+.header {
+  padding: 10px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+
+}
+
+.main {
+  padding: 25px;
+}
+
+.left {
+  background-color: peachpuff;
+}
+
+
+
+.footer {
+  padding: 10px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+}
+
+.sidebar {
+  padding: 25px;
+  background-color: darkcyan;
+}
+
+/* Descendent Selector */
+#plog h1 {
+  color: red;
+}
+
+/* Child Selector */
+#plog>h1 {
+  background-color: yellow;
+}
+
+/* Adjacent Sibling selector */
+h1+p {
+  color: blue;
+  font-size: 30px;
+}
+
+/* General Sibling Selector */
+h1~p {
+  background-color: blueviolet;
+  font-size: 30px;
+}
+
+img+p {
+  color: red;
+}
+
+.letters {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+p {
+  text-align: center;
+  background-color: yellow;
+  width: 70px;
+  margin-right: 1.5px;
+  border-radius: 15%;
+  border-color: rgb(250, 125, 75);
+  border-style: solid;
+}
+
+.letters:hover p:nth-child(even) {
+  /* color: red; */
+  transform: rotateY(360deg);
+  /* transform: skew(50deg); */
+  transition: 2.5s;
+  /* cursor: pointer; */
+}
+
+.letters:hover p:nth-child(odd) {
+  transform: rotateX(360deg);
+  transition: 1.5s;
+  /* transform: skew(10deg); */
+}
+
+
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item {
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  border: 5px solid;
+  background-color: orange;
+  margin: 10px;
+}
+
+.item {
+  /* flex-grow: 1; */
+  /* flex-shrink: 1; */
+  flex-basis: 100px;
+}
+
+
+
+.item:hover {
+  /* transform: translate(0, -1rem); */
+  /* transform: scale3d(2, 2, 1); */
+  transform: scale(3, 2);
+  /* transform: rotate(45deg) scale(1.5) translate(45px); */
+
+  background-color: yellow;
+  cursor: pointer;
+}
+
+
+.item {
+  transition-property: transform;
+  
+  /* transition-delay: 2s; */
+  transition-duration: .5s;
+}
+
+
+.box {
+
+  background-color: lightcoral;
+
+  width: 30px;
+
+  height: 30px;
+
+  animation: myanimation 5s infinite linear;
+
+}
+
+@keyframes myanimation {
+  0% {
+    width: 50px;
+    /* border: 0px solid red; */
+    background-color: greenyellow;
+  }
+
+  30% {
+    width: 30%;
+    background-color: green;
+    /* border: 5px solid red; */
+  }
+
+  60% {
+    width: 60%;
+    background-color: green;
+    /* border: 5px solid red; */
+  }
+
+  100% {
+    width: 100%;
+    background-color: red;
+    /* border: 5px solid red; */
+  }
+
+}
+
+#ball{
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  border-radius: 50%;
+
+  animation: myball 2s infinite linear;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes myball{
+  from{
+    transform: translate(-10px);
+  }
+  to{
+    transform: translate(calc(100vw - 550px));
+  }
+}

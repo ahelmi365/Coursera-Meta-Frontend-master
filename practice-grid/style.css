@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.item {
+    background-color: darkslategrey;
+}
+
+/* 
+.item-a{
+    order: 0;
+}
+
+.item-b{
+    order: 1;
+}
+
+.item-c{
+    order: 3;
+}
+.item-d{
+    background-color: red;
+    order: 2;
+}
+.item-e{
+    order: 4;
+} */
+
+
+
+
+.container{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+}
+
+.item-a, .item-e{
+    background-color: black;
+    color:white;
+}
+
+
+.item-b, .item-d{
+    background-color: blueviolet;
+
+}
+
+
+.item-c{
+    background-color: cadetblue;
+}
+@media (min-width:570px) {
+    .container {
+        height: 100vh;
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: 150px repeat(10, 1fr) 150px;
+        grid-template-rows: 50px auto 50px;
+    }
+
+
+
+
+    .item-a {
+        grid-column: 1/13;
+        grid-row: 1;
+
+       
+    }
+
+    .item-b {
+        grid-column: 1/2;
+        grid-row: 2;
+    }
+
+    .item-c {
+        grid-column: 2/12;
+        grid-row: 2;
+    }
+
+    .item-d {
+        grid-column: 12/13;
+        grid-row: 2;
+    }
+
+    .item-e {
+        grid-column: 1/13;
+        grid-row: 3;
+    }
+    
+
+
+
+}
+
+
+/* 
+.container {
+    height: 100vh;
+    padding: 1rem;
+    border: 5px solid red;
+
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: 100px 100px;
+
+    /* X axis */
+/* justify-content: center; */
+
+/* Y axis */
+/* align-content: center; */
+
+/* Both X and Y axis */
+place-content: space-between;
+
+
+/* justify-items: center;*/
+/* align-items: center; */
+
+place-items: stretch;
+
+}
+
+*/
